@@ -8,8 +8,10 @@ import { Component, OnInit, Input } from '@angular/core';
 export class PostListItemComponentComponent implements OnInit {
 
   //je récupère mon posts
-  @Input() article: object; 
-  constructor() { }
+  @Input() article: any;  
+
+  constructor() { 
+  }
 
   ngOnInit() {
   }
