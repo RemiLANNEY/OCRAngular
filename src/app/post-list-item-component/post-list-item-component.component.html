@@ -1,0 +1,20 @@
+<li [ngClass]="{'list-group-item': true,
+                'list-group-item-success': article.loveIts > 0,
+                'list-group-item-danger': article.loveIts < 0}">
+    <div class="row">
+    	<div class="col-xs-6"><h2>{{article.title}}</h2></div>
+    	<div class="col-xs-6 text-right created_at">{{article.created_at | date:"medium" }}</div>
+    </div>
+    <div class="row">
+    	<div class="col-xs-12">{{article.content}}</div>
+    </div> 
+    <div class="row">
+    	<div class="col-xs-12">
+    		 <button class="btn btn-success"
+              (click)="LoveIt()">Love It</button>
+              
+             <button class="btn btn-danger"
+              (click)="DontLoveIt()">Don't Love It</button>
+    	</div>
+    </div>           	
+</li>
